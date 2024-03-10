@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Artist;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArtistController extends Controller
 {
@@ -22,6 +22,10 @@ class ArtistController extends Controller
      */
     public function create()
     {
+        if(Auth::user()==null || Auth::user()->role!='admin') {
+            return redirect()->route('login');
+        }
+
         return view('artist.create');
     }
 
