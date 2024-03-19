@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\LocalityController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\RoleController;
 
@@ -56,5 +57,8 @@ Route::get('/role/{id}', [RoleController::class, 'show'])
         ->where('id', '[0-9]+')->name('role.show');
 
 
+Route::get('/localitie', [LocalityController::class, 'index'])->name('localitie.index');
+Route::get('/localitie/{id}', [LocalityController::class, 'show'])
+        ->where('id', '[0-9]+')->name('localitie.show');
 
 require __DIR__.'/auth.php';
