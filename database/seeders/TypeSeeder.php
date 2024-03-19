@@ -20,9 +20,9 @@ class TypeSeeder extends Seeder
 
         //Define data
         $types = [
-            ['type' => 'auteur'],
-            ['type' => 'scenographe'],
-            ['type' => 'comedien'],
+            ['type' => 'Auteur'],
+            ['type' => 'Scenographe'],
+            ['type' => 'Comedien'],
         ];
 
         //Insert data in the table
