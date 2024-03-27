@@ -6,6 +6,8 @@ use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\LocalityController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ShowController;
+use App\Models\Show;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,5 +62,7 @@ Route::get('/role/{id}', [RoleController::class, 'show'])
 Route::get('/localitie', [LocalityController::class, 'index'])->name('localitie.index');
 Route::get('/localitie/{id}', [LocalityController::class, 'show'])
         ->where('id', '[0-9]+')->name('localitie.show');
+
+Route::get('/show', [ShowController::class, 'index'])->name('show.index');
 
 require __DIR__.'/auth.php';

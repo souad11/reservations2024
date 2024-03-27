@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             TypeSeeder::class,
             RoleSeeder::class,
+            LocalitySeeder::class,
+            ShowSeeder::class,
         ]);
 
     }
